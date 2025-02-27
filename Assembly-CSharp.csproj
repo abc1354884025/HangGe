@@ -59,59 +59,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\State\PlayerMoveState.cs" />
-    <Compile Include="Assets\Scripts\Skill\SkillController\LightningBallController.cs" />
-    <Compile Include="Assets\Scripts\Player\State\PlayerStatMachine.cs" />
-    <Compile Include="Assets\Scripts\MeshCombine.cs" />
-    <Compile Include="Assets\Scripts\Skill\SkillManager.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Data\ItemData_Equipment.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyStateMachine.cs" />
-    <Compile Include="Assets\Scripts\Player\State\Mega\MegaFireBallState.cs" />
     <Compile Include="Assets\Scripts\Stat.cs" />
-    <Compile Include="Assets\Scripts\Player\State\PlayerGroundState.cs" />
-    <Compile Include="Assets\Scripts\Player\Warrior\PlayerSpinningState.cs" />
-    <Compile Include="Assets\Scripts\Skill\Skill.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerWarrior.cs" />
-    <Compile Include="Assets\Scripts\Enemy\State\EnemySlashState.cs" />
-    <Compile Include="Assets\Scripts\Player\State\PlayerIdleState.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
-    <Compile Include="Assets\Scripts\Data\ItemData.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyState.cs" />
-    <Compile Include="Assets\Scripts\SaveAndLoad\GameData.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
-    <Compile Include="Assets\Scripts\Player\State\Mega\MegaLightningBallState.cs" />
-    <Compile Include="Assets\Scripts\Template\Singleton.cs" />
-    <Compile Include="Assets\Scripts\Entity.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Skill\FireBallSkill.cs" />
-    <Compile Include="Assets\Scripts\Skill\SkillController\SkillController.cs" />
-    <Compile Include="Assets\Scripts\Player\Player_Warrior.cs" />
-    <Compile Include="Assets\Scripts\SaveAndLoad\SkillDefine.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_HealthBar.cs" />
-    <Compile Include="Assets\Scripts\Enemy\State\EnemyMoveState.cs" />
-    <Compile Include="Assets\Scripts\UI\ClickGroundArrow.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMega.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyStats.cs" />
-    <Compile Include="Assets\Scripts\MouseHighLight.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAnimationTrigger.cs" />
-    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
-    <Compile Include="Assets\Scripts\SaveAndLoad\SkillData.cs" />
-    <Compile Include="Assets\Scripts\Data\InventoryItem.cs" />
-    <Compile Include="Assets\Scripts\SaveAndLoad\SaveManager.cs" />
-    <Compile Include="Assets\Scripts\Skill\SkillController\FireBallController.cs" />
-    <Compile Include="Assets\Scripts\Player\State\PlayerNormalAttackState.cs" />
-    <Compile Include="Assets\Scripts\SaveAndLoad\MySQLTest.cs" />
+    <Compile Include="Assets\Scripts\Player\State\PlayerIdleState.cs" />
+    <Compile Include="Assets\Scripts\Player\State\PlayerStatMachine.cs" />
     <Compile Include="Assets\Scripts\Enemy\State\EnemyTauntState.cs" />
-    <Compile Include="Assets\Scripts\SaveAndLoad\FileDataHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\State\PlayerGroundState.cs" />
+    <Compile Include="Assets\Scripts\SaveAndLoad\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\Skill\FireBallSkill.cs" />
     <Compile Include="Assets\Scripts\Player\State\PlayerAnimationTrigger.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy_SkeletonWarrior.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_HealthBar.cs" />
+    <Compile Include="Assets\Scripts\UI\ClickGroundArrow.cs" />
+    <Compile Include="Assets\Scripts\SaveAndLoad\SkillData.cs" />
+    <Compile Include="Assets\Scripts\Skill\SkillManager.cs" />
+    <Compile Include="Assets\Scripts\Player\State\Mega\MegaLightningBallState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\State\EnemyMoveState.cs" />
+    <Compile Include="Assets\Scripts\Skill\Skill.cs" />
     <Compile Include="Assets\Scripts\Skill\LightningBallSkill.cs" />
-    <Compile Include="Assets\Scripts\Enemy\DetectionRange.cs" />
     <Compile Include="Assets\Scripts\Enemy\State\EnemyIdleState.cs" />
-    <Compile Include="Assets\Scripts\Data\Inventory.cs" />
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
-    <Compile Include="Assets\Scripts\ISaveManager.cs" />
+    <Compile Include="Assets\Scripts\Data\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMega.cs" />
+    <Compile Include="Assets\Scripts\SaveAndLoad\GameData.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_SkeletonWarrior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Skill\SkillController\FireBallController.cs" />
+    <Compile Include="Assets\Scripts\Data\Inventory.cs" />
+    <Compile Include="Assets\Scripts\SaveAndLoad\FileDataHandler.cs" />
+    <Compile Include="Assets\Scripts\MeshCombine.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_Warrior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAnimationTrigger.cs" />
+    <Compile Include="Assets\Scripts\MouseHighLight.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\State\EnemySlashState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Player\State\Mega\MegaFireBallState.cs" />
+    <Compile Include="Assets\Scripts\Template\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Player\Warrior\PlayerSpinningState.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Data\ItemData.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Player\State\PlayerSkillState.cs" />
+    <Compile Include="Assets\Scripts\ISaveManager.cs" />
+    <Compile Include="Assets\Scripts\Skill\SkillController\LightningBallController.cs" />
+    <Compile Include="Assets\Scripts\Skill\SkillController\SkillController.cs" />
+    <Compile Include="Assets\Scripts\SaveAndLoad\SkillDefine.cs" />
+    <Compile Include="Assets\Scripts\SaveAndLoad\MySQLTest.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerWarrior.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\Entity.cs" />
+    <Compile Include="Assets\Scripts\Player\State\PlayerNormalAttackState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\DetectionRange.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -446,20 +446,20 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.34f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    <Reference Include="EPPlus">
+      <HintPath>Assets\Plugins\EPPlus.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>Assets\Plugins\EPPlus.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
