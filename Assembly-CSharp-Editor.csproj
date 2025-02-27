@@ -59,8 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\ExtractMaterials.cs" />
-    <Compile Include="Assets\Editor\ExtractAnim.cs" />
     <Compile Include="Assets\Editor\AnimationClipTool.cs" />
+    <Compile Include="Assets\Editor\ExtractAnim.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

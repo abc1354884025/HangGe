@@ -114,6 +114,13 @@
     <Compile Include="Assets\Scripts\Enemy\DetectionRange.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Prefab\Glowing orbs Vol 3\Demo scene\Readme.txt" />
+    <None Include="Assets\Prefab\Glowing orbs Vol 3\Demo scene\Add_CenterGlow.txt" />
+    <None Include="Assets\Prefab\Glowing orbs Vol 3\Shaders\Blend_CenterGlow.shader" />
+    <None Include="Assets\Prefab\Glowing orbs Vol 3\Demo scene\Blend_CenterGlow.txt" />
+    <None Include="Assets\Prefab\Glowing orbs Vol 3\Shaders\Add_CenterGlow.shader" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.34f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
