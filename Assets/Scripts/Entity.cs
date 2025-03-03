@@ -8,7 +8,7 @@ namespace Mirror.Examples.Benchmark
     public class Entity : MonoBehaviour
     {
         #region Attribute Info
-        public float moveSpeed = 6f;
+
         #endregion
 
         #region Components

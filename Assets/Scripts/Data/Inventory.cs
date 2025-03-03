@@ -2,21 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour,ISaveManager
 {
     public static Inventory instance;
-    //���ϵ�װ��
-    public List<InventoryItem> equipment = new List<InventoryItem>();
-    public Dictionary<ItemData_Equipment, InventoryItem> equipmentDictionary = new Dictionary<ItemData_Equipment, InventoryItem>();
-    //װ���ֿ�
-    public List<InventoryItem> inventory = new List<InventoryItem>();
-    public Dictionary<ItemData, InventoryItem> inventoryItemDictionary = new Dictionary<ItemData, InventoryItem>();
-    //���ϲֿ�
+    //已装备的装备  
+    public List<ItemData_Equipment> equipment = new List<ItemData_Equipment>();
+
+    //装备背包
+    public List<ItemData_Equipment> equipmentInventory = new List<ItemData_Equipment>();
+
+    //材料背包
     public List<InventoryItem> stash = new List<InventoryItem>();
     public Dictionary<ItemData, InventoryItem> stashItemDictionary = new Dictionary<ItemData, InventoryItem>();
 
+    [Header("InventoryUI")]
+    [SerializeField] private Transform invenventorySlotParent;
+    [SerializeField] private Transform stashSlotParent;
+    [SerializeField] private Transform equipmentSlotParent;
 
 
+    private UI_ItemSlot[] itemItemSlots;
+    private UI_ItemSlot[] stashItemSlots;
+    private UI_EquipmentSlot[] equipmentItemSlots;
+    private UI_StatSlot[] statSlot;
     private void Awake()
     {
         if (instance == null)
@@ -28,26 +36,46 @@ public class Inventory : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+
+    }
+
+
+    public void AddItem(ItemData item)
+    {
+        if(item.itemType == ItemType.Equipment && CanAddItem())
+        {
+            AddToInventory(item);
+        }else if(item.itemType == ItemType.Material)
+        {
+            AddToStash(item);
+        }
+    }
     /// <summary>
-    /// ����װ��������
+    /// 物品是否上限
+    /// </summary>
+    /// <returns></returns>
+    public bool CanAddItem()
+    {
+        if (equipmentInventory.Count >= itemItemSlots.Length)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// 添加到装备背包
     /// </summary>
     /// <param name="item"></param>
     private void AddToInventory(ItemData item)
     {
-        if (inventoryItemDictionary.TryGetValue(item, out InventoryItem inventoryItem))
-        {
-            inventoryItem.AddStack();
-        }
-        else
-        {
-            InventoryItem newInventoryItem = new InventoryItem(item);
-            inventory.Add(newInventoryItem);
-            inventoryItemDictionary.Add(item, newInventoryItem);
-        }
+        equipmentInventory.Add(item as ItemData_Equipment);
     }
 
     /// <summary>
-    /// ���Ӳ��ϵ��ֿ�
+    /// 添加到材料背包
     /// </summary>
     /// <param name="item"></param>
     public void AddToStash(ItemData item)
@@ -65,22 +93,20 @@ public class Inventory : MonoBehaviour
     }
 
     /// <summary>
-    /// ������Ʒ
+    /// 移除物品
     /// </summary>
     /// <param name="item"></param>
     public void RemoveItem(ItemData item)
     {
-        if (inventoryItemDictionary.TryGetValue(item, out InventoryItem inventoryItem))
+        if (item.itemType == ItemType.Equipment)
         {
 
-            if (inventoryItem.stackSize <= 1)
+            for (int i = 0; i < equipmentInventory.Count; i++)
             {
-                inventory.Remove(inventoryItem);
-                inventoryItemDictionary.Remove(item);
-            }
-            else
-            {
-                inventoryItem.RemoveStack();
+                if(equipmentInventory[i] == item)
+                {
+                    equipmentInventory.RemoveAt(i);
+                }
             }
         }
         if (stashItemDictionary.TryGetValue(item, out InventoryItem stashItem))
@@ -99,6 +125,13 @@ public class Inventory : MonoBehaviour
         //UpdateSlotUI();
     }
 
+    public void LoadData(GameData data)
+    {
+        throw new System.NotImplementedException();
+    }
 
-
+    public void SaveData(ref GameData data)
+    {
+        throw new System.NotImplementedException();
+    }
 }

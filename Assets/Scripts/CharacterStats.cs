@@ -1,8 +1,25 @@
+using Mirror.Examples.Benchmark;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.AI;
+public enum StatType
+{
+    Health,
+    Mana,
+    HealthRegen,
+    ManaRegen,
+    AttackDamage,
+    PhysicalPenetration,
+    AbilityPower,
+    SpellPenetration,
+    PhysicalResistance,
+    MagicResistance,
+    CritChance,
+    CritDamage,
+    MoveSpeed
+}
 public class CharacterStats : MonoBehaviour
 {
     [Header("当前生命值")][SerializeField] public float currentHealth;//当前生命值
@@ -27,6 +44,8 @@ public class CharacterStats : MonoBehaviour
 
     [Header("护盾")][SerializeField] public Stat Shield;//护盾
 
+    NavMeshAgent agent;
+
     public delegate void OnHealthChange();
     public event OnHealthChange onHealthChange;
 
@@ -39,9 +58,10 @@ public class CharacterStats : MonoBehaviour
     }
     protected virtual void Start()
     {
-        Debug.Log("CharacterStats Start");
+        agent = GetComponent<NavMeshAgent>();
         onHealthChange?.Invoke();
         onManaChange?.Invoke();
+        if(agent!= null)SetMoveSpeed();
     }
     // Start is called before the first frame update
     public virtual void DoDamage(CharacterStats target) 
@@ -58,7 +78,7 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void DoMagicDamage(CharacterStats target)
     {
-
+        
     }
 
     //加血
@@ -88,7 +108,16 @@ public class CharacterStats : MonoBehaviour
         int totalCritCalChance = critChance.GetValue();
         return Random.Range(0, 100) < totalCritCalChance;
     }
+    /// <summary>
+    /// 设置移动速度
+    /// </summary>
+    /// <returns></returns>
+    public virtual void SetMoveSpeed()
+    {
+        Debug.Log("SetMove");
+        agent.speed = moveSpeed.GetValue();
 
+    }
     public float GetHealth() {return currentHealth;}
     public float GetMana() { return currentMana; }
     public float GetMaxHealth(){ return maxHealth.GetValue(); }

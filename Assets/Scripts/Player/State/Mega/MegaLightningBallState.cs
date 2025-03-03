@@ -18,7 +18,7 @@ public class MegaLightningBallState : PlayerState
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
-        player.skill.lightningBall.UseSkill();
+        SkillManager.instance.lightningBall.UseSkill();
     }
 
     public override void ClickMove()

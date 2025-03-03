@@ -12,8 +12,8 @@ public class Player : Entity
 
     public Camera camera { get; private set; }
     public PlayerStateMachine stateMachine {  get; private set; }
-    public SkillManager skill;
-    public PlayerStats stats;
+    private SkillManager skill;
+    public CharacterStats stats { get; private set; }
 
 
     public Vector3 destination;
@@ -46,26 +46,22 @@ public class Player : Entity
     {
         base.Awake();
         camera = Camera.main;
-        stats = GetComponent<PlayerStats>();
-        skill = GetComponentInChildren<SkillManager>();
+        stats = GetComponent<CharacterStats>();
+        
         stateMachine = new PlayerStateMachine();
         MoveState = new PlayerMoveState(this, stateMachine, "Move");
         IdleState = new PlayerIdleState(this, stateMachine, "Idle");
         NormalAttackState = new PlayerNormalAttackState(this, stateMachine, "NormalAttack");
         SpinningState = new PlayerSpinningState(this, stateMachine, "Spinning");
-
-
-
-
-        
         stateMachine.Initialize(IdleState);
 
 
-        layerMask = ~(1 << 10 | 1 << 11);
+        layerMask = 1 << 7 | 1 << 8| 1<< 9;
     }
     protected override void Start()
     {
         base.Start();
+        skill = SkillManager.instance;
         #region MegaSkillStates
         megaFireBallState = new MegaFireBallState(this, stateMachine, "Cast");
         MegaLightningBallState = new MegaLightningBallState(this, stateMachine, "Cast");
@@ -115,6 +111,7 @@ public class Player : Entity
                 target = null;
                 enemy = null;
             }
+
             if (Input.GetMouseButtonDown(1))
             {
                 Instantiate(arrow, hit.point, Quaternion.identity);

@@ -20,7 +20,7 @@ public class MegaFireBallState : PlayerState
     public override void AnimationFinishTrigger()
     {
         base.AnimationFinishTrigger();
-        player.skill.fireBall.UseSkill();
+        SkillManager.instance.fireBall.UseSkill();
     }
 
     public override void ClickMove()

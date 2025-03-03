@@ -22,7 +22,7 @@ public class Skill : MonoBehaviour
 
 
 
-    public Player player;//
+    private Player player;//
     public virtual bool CanUseSkill()
     {
         if (cooldownTimer < 0)
@@ -47,7 +47,7 @@ public class Skill : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        player = GetComponentInParent<Player>();
+        player = PlayerManager.instance.player;
         skillData = SaveManager.instance.skillDataDic[(int)skillName];
         prefab = Resources.Load<SkillController>("SkillPrefab/" + skillData.prefabName);
     }

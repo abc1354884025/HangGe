@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8ABC2AE3-5615-A67D-2B66-DAACDF77A06E}</ProjectGuid>
+    <ProjectGuid>{068819A1-A028-1E46-5F9F-E8726C3D6646}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -850,27 +850,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{23933B88-625B-C607-7890-A6C89B73BC19}</Project>
+      <Project>{5F343C23-8E59-25D9-2366-7BB5DB26F173}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{E7BE182A-8441-A567-EAE0-B0BBA02F7477}</Project>
+      <Project>{D583536B-0E1F-E76F-88DB-780F6B716CD0}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{8DA211FE-86F6-9E3B-AB9E-E54C9FB1821C}</Project>
+      <Project>{7ACEAF71-7423-729B-2DF7-F36B8B71F79A}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{1A36A117-CEF9-F59C-C214-F217CBA8F083}</Project>
+      <Project>{9E5EF6DB-BFE1-0A69-2B19-34FE7ECD1124}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{E52EB1A9-A62A-5410-DC5E-B72A18FA5526}</Project>
+      <Project>{1374885C-0E22-0D1E-FB63-B53928D2962E}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{6F15258D-7D88-6828-B30E-8A4E303288D9}</Project>
+      <Project>{7704F1E1-84A0-B102-42C3-0C11D5CCD16F}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
   </ItemGroup>

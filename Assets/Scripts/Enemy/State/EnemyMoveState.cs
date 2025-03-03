@@ -21,14 +21,13 @@ public class EnemyMoveState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        enemy.agent.speed = enemy.moveSpeed;
         enemy.agent.isStopped = false;
     }
 
     public override void Exit()
     {
         base.Exit();
-        enemy.agent.speed = 0; 
+
         enemy.agent.isStopped = true;
     }
 

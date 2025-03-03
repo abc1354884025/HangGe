@@ -17,7 +17,10 @@ public class FileDataHandler
         this.encryptData = encryptData;
 
     }
-
+    /// <summary>
+    /// 将GameData对象序列化为json字符串，并加密后保存到文件
+    /// </summary>
+    /// <param name="data"></param>
     public void Save(GameData data)
     {
 
@@ -44,7 +47,10 @@ public class FileDataHandler
             Debug.Log("Error saving data: " + e.Message);
         }
     }
-
+    /// <summary>
+    /// 将数据解密后反序列化为GameData对象
+    /// </summary>
+    /// <returns></returns>
     public GameData Load()
     {
         string fullPath = Path.Combine(dataDirPath, dataFileName);

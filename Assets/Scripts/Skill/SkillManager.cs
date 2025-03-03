@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class SkillManager : MonoBehaviour
 {
-
+    public static SkillManager instance;
     public LightningBallSkill lightningBall;
     public FireBallSkill fireBall;
     private Player player;
     private void Awake()
     {
-        player = GetComponentInParent<Player>();
+        
         lightningBall=GetComponent<LightningBallSkill>();
         fireBall = GetComponent<FireBallSkill>();
+    }
+    private void Start()
+    {
+        player = PlayerManager.instance.player;
     }
 }
